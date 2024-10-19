@@ -315,7 +315,7 @@ class DecodedIdToken {
       exp: map['exp']! as int,
       firebase: TokenProvider(
         identities: Map.from(map['firebase']! as Map),
-        signInProvider: map['sign_in_provider']! as String,
+        signInProvider: Map.from(map['firebase']! as Map)['sign_in_provider']! as String,
         signInSecondFactor: map['sign_in_second_factor'] as String?,
         secondFactorIdentifier: map['second_factor_identifier'] as String?,
         tenant: map['tenant'] as String?,
